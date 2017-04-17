@@ -1,0 +1,18 @@
+# ===================================================================
+#
+# ===================================================================
+
+spring:
+    profiles:
+        active: dev
+        include: swagger
+        
+    rabbitmq:
+      host: 192.168.1.52
+      port: 5672
+      username: admin
+      password: 123456
+      virtualHost: /
+ 
+server:  
+    port: 8081

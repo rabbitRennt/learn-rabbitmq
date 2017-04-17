@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>learn-rabbitmq</groupId>
+		<artifactId>com.fan</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>mq-producer</artifactId>
+	<name>mq-producer</name>
+	<url>http://maven.apache.org</url>
+
+
+	<prerequisites>
+		<maven>${maven.version}</maven>
+	</prerequisites>
+
+	<properties>
+		<argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
+		<assertj.version>3.6.2</assertj.version>
+		<awaitility.version>2.0.0</awaitility.version>
+		<commons-io.version>2.5</commons-io.version>
+		<commons-lang.version>3.5</commons-lang.version>
+		<docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
+		<frontend-maven-plugin.version>1.3</frontend-maven-plugin.version>
+		<hibernate.version>5.2.8.Final</hibernate.version>
+		<hikaricp.version>2.6.0</hikaricp.version>
+		<jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
+		<java.version>1.8</java.version>
+		<javassist.version>3.21.0-GA</javassist.version>
+		<jhipster.server.version>1.1.0</jhipster.server.version>
+		<liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
+		<liquibase-slf4j.version>2.0.0</liquibase-slf4j.version>
+		<logstash-logback-encoder.version>4.8</logstash-logback-encoder.version>
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
+		<mapstruct.version>1.1.0.Final</mapstruct.version>
+		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+		<maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
+		<maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
+		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+
+
+		<!-- Spring properties -->
+		<spring-cloud-stream.version>Brooklyn.SR2</spring-cloud-stream.version>
+		<springfox.version>2.6.1</springfox.version>
+		<undertow.version>1.4.10.Final</undertow.version>
+		<validation-api.version>1.1.0.Final</validation-api.version>
+		<yarn.version>v0.21.3</yarn.version>
+	</properties>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>learn-rabbitmq</groupId>
+			<artifactId>mq-common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+	</dependencies>
+
+
+</project>
